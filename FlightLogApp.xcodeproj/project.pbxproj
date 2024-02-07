@@ -14,6 +14,14 @@
 		AB98887D2B7301070007B575 /* FlightLogAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98887C2B7301070007B575 /* FlightLogAppTests.swift */; };
 		AB9888872B7301070007B575 /* FlightLogAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9888862B7301070007B575 /* FlightLogAppUITests.swift */; };
 		AB9888892B7301070007B575 /* FlightLogAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9888882B7301070007B575 /* FlightLogAppUITestsLaunchTests.swift */; };
+		AB9888962B730B030007B575 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9888952B730B030007B575 /* LoginView.swift */; };
+		AB9888982B730BBE0007B575 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9888972B730BBE0007B575 /* HomeView.swift */; };
+		AB98889A2B730FC80007B575 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB9888992B730FC80007B575 /* GoogleService-Info.plist */; };
+		AB98889D2B73130E0007B575 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = AB98889C2B73130E0007B575 /* FirebaseAuth */; };
+		AB98889F2B73130E0007B575 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = AB98889E2B73130E0007B575 /* FirebaseDatabase */; };
+		AB9888A12B73130E0007B575 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = AB9888A02B73130E0007B575 /* FirebaseFirestore */; };
+		AB9888A32B73160A0007B575 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9888A22B73160A0007B575 /* SignUpView.swift */; };
+		AB9888A52B7316480007B575 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9888A42B7316480007B575 /* AuthViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +52,11 @@
 		AB9888822B7301070007B575 /* FlightLogAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlightLogAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB9888862B7301070007B575 /* FlightLogAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightLogAppUITests.swift; sourceTree = "<group>"; };
 		AB9888882B7301070007B575 /* FlightLogAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightLogAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AB9888952B730B030007B575 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		AB9888972B730BBE0007B575 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		AB9888992B730FC80007B575 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AB9888A22B73160A0007B575 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		AB9888A42B7316480007B575 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +64,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB98889F2B73130E0007B575 /* FirebaseDatabase in Frameworks */,
+				AB98889D2B73130E0007B575 /* FirebaseAuth in Frameworks */,
+				AB9888A12B73130E0007B575 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +111,11 @@
 			isa = PBXGroup;
 			children = (
 				AB98886B2B7301040007B575 /* FlightLogAppApp.swift */,
+				AB9888A22B73160A0007B575 /* SignUpView.swift */,
+				AB9888952B730B030007B575 /* LoginView.swift */,
+				AB9888972B730BBE0007B575 /* HomeView.swift */,
+				AB9888A42B7316480007B575 /* AuthViewModel.swift */,
+				AB9888992B730FC80007B575 /* GoogleService-Info.plist */,
 				AB98886D2B7301040007B575 /* ContentView.swift */,
 				AB98886F2B7301060007B575 /* Assets.xcassets */,
 				AB9888712B7301060007B575 /* Preview Content */,
@@ -143,6 +164,11 @@
 			dependencies = (
 			);
 			name = FlightLogApp;
+			packageProductDependencies = (
+				AB98889C2B73130E0007B575 /* FirebaseAuth */,
+				AB98889E2B73130E0007B575 /* FirebaseDatabase */,
+				AB9888A02B73130E0007B575 /* FirebaseFirestore */,
+			);
 			productName = FlightLogApp;
 			productReference = AB9888682B7301040007B575 /* FlightLogApp.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +241,9 @@
 				Base,
 			);
 			mainGroup = AB98885F2B7301030007B575;
+			packageReferences = (
+				AB98889B2B73130E0007B575 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = AB9888692B7301040007B575 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,6 +262,7 @@
 			files = (
 				AB9888732B7301060007B575 /* Preview Assets.xcassets in Resources */,
 				AB9888702B7301060007B575 /* Assets.xcassets in Resources */,
+				AB98889A2B730FC80007B575 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +287,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB9888962B730B030007B575 /* LoginView.swift in Sources */,
+				AB9888A32B73160A0007B575 /* SignUpView.swift in Sources */,
+				AB9888A52B7316480007B575 /* AuthViewModel.swift in Sources */,
+				AB9888982B730BBE0007B575 /* HomeView.swift in Sources */,
 				AB98886E2B7301040007B575 /* ContentView.swift in Sources */,
 				AB98886C2B7301040007B575 /* FlightLogAppApp.swift in Sources */,
 			);
@@ -582,6 +616,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AB98889B2B73130E0007B575 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.21.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AB98889C2B73130E0007B575 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB98889B2B73130E0007B575 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		AB98889E2B73130E0007B575 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB98889B2B73130E0007B575 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		AB9888A02B73130E0007B575 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB98889B2B73130E0007B575 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AB9888602B7301030007B575 /* Project object */;
 }

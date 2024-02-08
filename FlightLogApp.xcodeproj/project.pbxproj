@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB8165722B745ED700A89F3A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8165712B745ED700A89F3A /* LoginView.swift */; };
+		AB8165742B745FC500A89F3A /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8165732B745FC500A89F3A /* InputView.swift */; };
+		AB8165762B7467E200A89F3A /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8165752B7467E200A89F3A /* RegistrationView.swift */; };
 		AB98886C2B7301040007B575 /* FlightLogAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98886B2B7301040007B575 /* FlightLogAppApp.swift */; };
 		AB98886E2B7301040007B575 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98886D2B7301040007B575 /* ContentView.swift */; };
 		AB9888702B7301060007B575 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB98886F2B7301060007B575 /* Assets.xcassets */; };
@@ -14,14 +17,10 @@
 		AB98887D2B7301070007B575 /* FlightLogAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98887C2B7301070007B575 /* FlightLogAppTests.swift */; };
 		AB9888872B7301070007B575 /* FlightLogAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9888862B7301070007B575 /* FlightLogAppUITests.swift */; };
 		AB9888892B7301070007B575 /* FlightLogAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9888882B7301070007B575 /* FlightLogAppUITestsLaunchTests.swift */; };
-		AB9888962B730B030007B575 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9888952B730B030007B575 /* LoginView.swift */; };
-		AB9888982B730BBE0007B575 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9888972B730BBE0007B575 /* HomeView.swift */; };
 		AB98889A2B730FC80007B575 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB9888992B730FC80007B575 /* GoogleService-Info.plist */; };
 		AB98889D2B73130E0007B575 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = AB98889C2B73130E0007B575 /* FirebaseAuth */; };
 		AB98889F2B73130E0007B575 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = AB98889E2B73130E0007B575 /* FirebaseDatabase */; };
 		AB9888A12B73130E0007B575 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = AB9888A02B73130E0007B575 /* FirebaseFirestore */; };
-		AB9888A32B73160A0007B575 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9888A22B73160A0007B575 /* SignUpView.swift */; };
-		AB9888A52B7316480007B575 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9888A42B7316480007B575 /* AuthViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AB8165712B745ED700A89F3A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		AB8165732B745FC500A89F3A /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
+		AB8165752B7467E200A89F3A /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		AB9888682B7301040007B575 /* FlightLogApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlightLogApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB98886B2B7301040007B575 /* FlightLogAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightLogAppApp.swift; sourceTree = "<group>"; };
 		AB98886D2B7301040007B575 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,11 +54,7 @@
 		AB9888822B7301070007B575 /* FlightLogAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlightLogAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB9888862B7301070007B575 /* FlightLogAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightLogAppUITests.swift; sourceTree = "<group>"; };
 		AB9888882B7301070007B575 /* FlightLogAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightLogAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		AB9888952B730B030007B575 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		AB9888972B730BBE0007B575 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		AB9888992B730FC80007B575 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		AB9888A22B73160A0007B575 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
-		AB9888A42B7316480007B575 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +85,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB8165672B745A6100A89F3A /* App */ = {
+			isa = PBXGroup;
+			children = (
+				AB98886B2B7301040007B575 /* FlightLogAppApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		AB8165682B745A6A00A89F3A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				AB8165732B745FC500A89F3A /* InputView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		AB81656C2B745AC300A89F3A /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				AB81656F2B745B0600A89F3A /* Authentication */,
+				AB8165702B745B1000A89F3A /* Profile */,
+				AB81656E2B745AF200A89F3A /* Root */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		AB81656D2B745AD100A89F3A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AB81656E2B745AF200A89F3A /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				AB98886D2B7301040007B575 /* ContentView.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		AB81656F2B745B0600A89F3A /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				AB8165712B745ED700A89F3A /* LoginView.swift */,
+				AB8165752B7467E200A89F3A /* RegistrationView.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		AB8165702B745B1000A89F3A /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		AB98885F2B7301030007B575 = {
 			isa = PBXGroup;
 			children = (
@@ -110,13 +165,11 @@
 		AB98886A2B7301040007B575 /* FlightLogApp */ = {
 			isa = PBXGroup;
 			children = (
-				AB98886B2B7301040007B575 /* FlightLogAppApp.swift */,
-				AB9888A22B73160A0007B575 /* SignUpView.swift */,
-				AB9888952B730B030007B575 /* LoginView.swift */,
-				AB9888972B730BBE0007B575 /* HomeView.swift */,
-				AB9888A42B7316480007B575 /* AuthViewModel.swift */,
+				AB81656D2B745AD100A89F3A /* Model */,
+				AB81656C2B745AC300A89F3A /* Core */,
+				AB8165672B745A6100A89F3A /* App */,
+				AB8165682B745A6A00A89F3A /* Components */,
 				AB9888992B730FC80007B575 /* GoogleService-Info.plist */,
-				AB98886D2B7301040007B575 /* ContentView.swift */,
 				AB98886F2B7301060007B575 /* Assets.xcassets */,
 				AB9888712B7301060007B575 /* Preview Content */,
 			);
@@ -287,12 +340,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB9888962B730B030007B575 /* LoginView.swift in Sources */,
-				AB9888A32B73160A0007B575 /* SignUpView.swift in Sources */,
-				AB9888A52B7316480007B575 /* AuthViewModel.swift in Sources */,
-				AB9888982B730BBE0007B575 /* HomeView.swift in Sources */,
 				AB98886E2B7301040007B575 /* ContentView.swift in Sources */,
 				AB98886C2B7301040007B575 /* FlightLogAppApp.swift in Sources */,
+				AB8165742B745FC500A89F3A /* InputView.swift in Sources */,
+				AB8165722B745ED700A89F3A /* LoginView.swift in Sources */,
+				AB8165762B7467E200A89F3A /* RegistrationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

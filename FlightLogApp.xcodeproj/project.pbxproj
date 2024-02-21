@@ -13,15 +13,12 @@
 		AB2B90902B75657300592899 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AB2B908F2B75657300592899 /* FirebaseDatabaseSwift */; };
 		AB2B90922B75657400592899 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AB2B90912B75657400592899 /* FirebaseFirestoreSwift */; };
 		AB2B90962B75661400592899 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2B90952B75661400592899 /* AuthViewModel.swift */; };
-		AB2B909A2B75932A00592899 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2B90992B75932900592899 /* WelcomeView.swift */; };
 		AB5C9DFF2B79302C00C60C3E /* LogEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5C9DFE2B79302C00C60C3E /* LogEntry.swift */; };
 		AB5C9E012B7933EC00C60C3E /* LogEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5C9E002B7933EC00C60C3E /* LogEntryView.swift */; };
 		AB5C9E032B793B8100C60C3E /* IntInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5C9E022B793B8100C60C3E /* IntInputView.swift */; };
 		AB5C9E052B793B9A00C60C3E /* DoubleInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5C9E042B793B9A00C60C3E /* DoubleInputView.swift */; };
 		AB5C9E072B793E3800C60C3E /* NumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5C9E062B793E3800C60C3E /* NumberFormatter.swift */; };
-		AB8165722B745ED700A89F3A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8165712B745ED700A89F3A /* LoginView.swift */; };
 		AB8165742B745FC500A89F3A /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8165732B745FC500A89F3A /* InputView.swift */; };
-		AB8165762B7467E200A89F3A /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8165752B7467E200A89F3A /* RegistrationView.swift */; };
 		AB98886C2B7301040007B575 /* FlightLogAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98886B2B7301040007B575 /* FlightLogAppApp.swift */; };
 		AB98886E2B7301040007B575 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98886D2B7301040007B575 /* ContentView.swift */; };
 		AB9888702B7301060007B575 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB98886F2B7301060007B575 /* Assets.xcassets */; };
@@ -33,6 +30,12 @@
 		AB98889D2B73130E0007B575 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = AB98889C2B73130E0007B575 /* FirebaseAuth */; };
 		AB98889F2B73130E0007B575 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = AB98889E2B73130E0007B575 /* FirebaseDatabase */; };
 		AB9888A12B73130E0007B575 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = AB9888A02B73130E0007B575 /* FirebaseFirestore */; };
+		ABE65F362B82A3E00009BD1F /* FlightLogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE65F352B82A3E00009BD1F /* FlightLogViewModel.swift */; };
+		ABE65F392B82B35A0009BD1F /* FlightListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE65F382B82B35A0009BD1F /* FlightListView.swift */; };
+		ABE65F3B2B82B3670009BD1F /* LogEntryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE65F3A2B82B3670009BD1F /* LogEntryDetailView.swift */; };
+		ABE65F3D2B82B36F0009BD1F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE65F3C2B82B36F0009BD1F /* LoginView.swift */; };
+		ABE65F3F2B82B3750009BD1F /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE65F3E2B82B3750009BD1F /* RegistrationView.swift */; };
+		ABE65F412B82B3A40009BD1F /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE65F402B82B3A40009BD1F /* WelcomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,15 +60,12 @@
 		AB2B908B2B755DFC00592899 /* SettingRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRowView.swift; sourceTree = "<group>"; };
 		AB2B908D2B7560B000592899 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AB2B90952B75661400592899 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
-		AB2B90992B75932900592899 /* WelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		AB5C9DFE2B79302C00C60C3E /* LogEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogEntry.swift; sourceTree = "<group>"; };
 		AB5C9E002B7933EC00C60C3E /* LogEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogEntryView.swift; sourceTree = "<group>"; };
 		AB5C9E022B793B8100C60C3E /* IntInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntInputView.swift; sourceTree = "<group>"; };
 		AB5C9E042B793B9A00C60C3E /* DoubleInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleInputView.swift; sourceTree = "<group>"; };
 		AB5C9E062B793E3800C60C3E /* NumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatter.swift; sourceTree = "<group>"; };
-		AB8165712B745ED700A89F3A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		AB8165732B745FC500A89F3A /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
-		AB8165752B7467E200A89F3A /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		AB9888682B7301040007B575 /* FlightLogApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlightLogApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB98886B2B7301040007B575 /* FlightLogAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightLogAppApp.swift; sourceTree = "<group>"; };
 		AB98886D2B7301040007B575 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -77,6 +77,12 @@
 		AB9888862B7301070007B575 /* FlightLogAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightLogAppUITests.swift; sourceTree = "<group>"; };
 		AB9888882B7301070007B575 /* FlightLogAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightLogAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		AB9888992B730FC80007B575 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		ABE65F352B82A3E00009BD1F /* FlightLogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightLogViewModel.swift; sourceTree = "<group>"; };
+		ABE65F382B82B35A0009BD1F /* FlightListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightListView.swift; sourceTree = "<group>"; };
+		ABE65F3A2B82B3670009BD1F /* LogEntryDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogEntryDetailView.swift; sourceTree = "<group>"; };
+		ABE65F3C2B82B36F0009BD1F /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		ABE65F3E2B82B3750009BD1F /* RegistrationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		ABE65F402B82B3A40009BD1F /* WelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,20 +115,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AB2B90932B7565D900592899 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				AB2B90992B75932900592899 /* WelcomeView.swift */,
-				AB8165712B745ED700A89F3A /* LoginView.swift */,
-				AB8165752B7467E200A89F3A /* RegistrationView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		AB2B90942B7565E100592899 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				AB2B90952B75661400592899 /* AuthViewModel.swift */,
+				ABE65F352B82A3E00009BD1F /* FlightLogViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -150,7 +147,8 @@
 		AB81656C2B745AC300A89F3A /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				AB81656F2B745B0600A89F3A /* Authentication */,
+				ABE65F372B82B3430009BD1F /* Views */,
+				AB2B90942B7565E100592899 /* ViewModel */,
 				AB8165702B745B1000A89F3A /* Profile */,
 				AB81656E2B745AF200A89F3A /* Root */,
 			);
@@ -173,15 +171,6 @@
 				AB98886D2B7301040007B575 /* ContentView.swift */,
 			);
 			path = Root;
-			sourceTree = "<group>";
-		};
-		AB81656F2B745B0600A89F3A /* Authentication */ = {
-			isa = PBXGroup;
-			children = (
-				AB2B90942B7565E100592899 /* ViewModel */,
-				AB2B90932B7565D900592899 /* Views */,
-			);
-			path = Authentication;
 			sourceTree = "<group>";
 		};
 		AB8165702B745B1000A89F3A /* Profile */ = {
@@ -249,6 +238,18 @@
 				AB9888882B7301070007B575 /* FlightLogAppUITestsLaunchTests.swift */,
 			);
 			path = FlightLogAppUITests;
+			sourceTree = "<group>";
+		};
+		ABE65F372B82B3430009BD1F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ABE65F382B82B35A0009BD1F /* FlightListView.swift */,
+				ABE65F402B82B3A40009BD1F /* WelcomeView.swift */,
+				ABE65F3A2B82B3670009BD1F /* LogEntryDetailView.swift */,
+				ABE65F3C2B82B36F0009BD1F /* LoginView.swift */,
+				ABE65F3E2B82B3750009BD1F /* RegistrationView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -397,15 +398,18 @@
 				AB98886E2B7301040007B575 /* ContentView.swift in Sources */,
 				AB98886C2B7301040007B575 /* FlightLogAppApp.swift in Sources */,
 				AB2B908C2B755DFC00592899 /* SettingRowView.swift in Sources */,
+				ABE65F3F2B82B3750009BD1F /* RegistrationView.swift in Sources */,
+				ABE65F3B2B82B3670009BD1F /* LogEntryDetailView.swift in Sources */,
 				AB5C9DFF2B79302C00C60C3E /* LogEntry.swift in Sources */,
 				AB5C9E012B7933EC00C60C3E /* LogEntryView.swift in Sources */,
+				ABE65F362B82A3E00009BD1F /* FlightLogViewModel.swift in Sources */,
+				ABE65F392B82B35A0009BD1F /* FlightListView.swift in Sources */,
 				AB5C9E052B793B9A00C60C3E /* DoubleInputView.swift in Sources */,
 				AB8165742B745FC500A89F3A /* InputView.swift in Sources */,
+				ABE65F412B82B3A40009BD1F /* WelcomeView.swift in Sources */,
 				AB2B908E2B7560B000592899 /* User.swift in Sources */,
-				AB2B909A2B75932A00592899 /* WelcomeView.swift in Sources */,
-				AB8165722B745ED700A89F3A /* LoginView.swift in Sources */,
 				AB2B908A2B755C3600592899 /* ProfileView.swift in Sources */,
-				AB8165762B7467E200A89F3A /* RegistrationView.swift in Sources */,
+				ABE65F3D2B82B36F0009BD1F /* LoginView.swift in Sources */,
 				AB2B90962B75661400592899 /* AuthViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

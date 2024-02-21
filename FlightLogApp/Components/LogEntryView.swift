@@ -9,7 +9,8 @@ import SwiftUI
 
 struct LogEntryView: View {
     @Binding var logEntry: LogEntry
-
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
         ScrollView {
             VStack(spacing: 20) {
@@ -78,11 +79,27 @@ struct LogEntryView: View {
                         .bold()
                     IntInputView(value: Binding(get: { logEntry.landingsNight ?? 0 }, set: { logEntry.landingsNight = $0 }), label: "", placeholder: "e.g., 1")
                 }
+                Button("Submit") {
+                    FlightLogsViewModel.postFlightLog(logEntry: logEntry) {
+                        DispatchQueue.main.async {
+                            presentationMode.wrappedValue.dismiss()
+                        }
+                    }
+                }
+                .padding()
+                .background(Color.blue)
+                .cornerRadius(10)
+                .foregroundColor(.white)
             }
+            .padding()
+            .navigationBarItems(leading: Button("Dismiss") {
+                presentationMode.wrappedValue.dismiss()
+            })
         }
-        .padding()
+        .navigationBarTitle("Add/Edit Log", displayMode: .inline)
     }
 }
+
 
 struct LogEntryView_Previews: PreviewProvider {
     static var previews: some View {

@@ -19,6 +19,22 @@ class FlightLogsViewModel: ObservableObject {
     @Published var userSession: FirebaseAuth.User?
     @Published var currentUser: User?
     
+    var totalUserHours: Double {
+        flightLogs.reduce(0) { $0 + $1.totalHours}
+    }
+    
+    var totalUserPICTime: Double {
+        flightLogs.reduce(0) {$0 + $1.picTime}
+    }
+    
+    var totalUserNightTime: Double {
+        flightLogs.reduce(0) {$0 + $1.picTime}
+    }
+    
+    var totalUserInstumentTime: Double {
+        flightLogs.reduce(0) {$0 + $1.instrumentTime}
+    }
+    
     init() {
         self.userSession = Auth.auth().currentUser
         

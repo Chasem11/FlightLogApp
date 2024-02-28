@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct FlightLogsListView: View {
     @StateObject private var viewModel = FlightLogsViewModel()
     @State private var showingAddLogView = false
@@ -30,13 +31,16 @@ struct FlightLogsListView: View {
                 Image(systemName: "plus")
             })
             .sheet(isPresented: $showingAddLogView) {
-                LogEntryView(logEntry: .constant(LogEntry(date: Date(), aircraftMakeModel: "", aircraftIdentification: "", departurePoint: "", arrivalPoint: "", totalHours: 0, picTime: 0, nightTime: 0, instrumentTime: 0, landingsDay: 0, landingsNight: 0)))
+                LogEntryView()
             }
-            .onAppear(perform: viewModel.fetchFlightLogs)
+            .onAppear{
+                Task {
+                    await viewModel.fetchFlightLogs()
+                }
+            }
         }
     }
 }
-    
 
 
 struct FlightLogsListView_Previews: PreviewProvider {

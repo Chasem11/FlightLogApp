@@ -10,32 +10,21 @@ import FirebaseFirestoreSwift
 
 
 struct LogEntry: Identifiable, Codable {
-    @DocumentID var id: String?
-    var date: Date
-    var aircraftMakeModel: String
-    var aircraftIdentification: String
-    var departurePoint: String
-    var arrivalPoint: String
-    var totalHours: Double
-    var picTime: Double  // Pilot in Command Time
-    var nightTime: Double?
-    var instrumentTime: Double?
-    var landingsDay: Int?
-    var landingsNight: Int?
-    
+    let id: String?
+    let userId: String
+    let date: Date
+    let aircraftMakeModel: String
+    let aircraftIdentification: String
+    let departurePoint: String
+    let arrivalPoint: String
+    let totalHours: Double
+    let picTime: Double  // Pilot in Command Time
+    let nightTime: Double
+    let instrumentTime: Double
+    let landingsDay: Int
+    let landingsNight: Int
+}
 
-    enum CodingKeys: String, CodingKey {
-        case id
-        case date
-        case aircraftMakeModel = "aircraft_make_model"
-        case aircraftIdentification = "aircraft_identification"
-        case departurePoint = "departure_point"
-        case arrivalPoint = "arrival_point"
-        case totalHours = "total_hours"
-        case picTime = "pic_time"
-        case nightTime = "night_time"
-        case instrumentTime = "instrument_time"
-        case landingsDay = "landings_day"
-        case landingsNight = "landings_night"
-    }
+extension LogEntry {
+    static var MOCK_LOG = LogEntry(id: NSUUID().uuidString,userId: NSUUID().uuidString, date: Date(), aircraftMakeModel: "Nimbus", aircraftIdentification: "CHXZ", departurePoint: "MIA", arrivalPoint: "JFK", totalHours: 6, picTime: 6, nightTime: 2, instrumentTime: 3, landingsDay: 1, landingsNight: 2)
 }

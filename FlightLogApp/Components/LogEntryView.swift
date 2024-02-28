@@ -8,118 +8,138 @@
 import SwiftUI
 
 struct LogEntryView: View {
-    @Binding var logEntry: LogEntry
+    @State private var userId = ""
+    @State private var selectedDate = Date()
+    @State private var aircraftMakeModel = ""
+    @State private var aircraftIdentification = ""
+    @State private var departurePoint = ""
+    @State private var arrivalPoint = ""
+    @State private var totalHours: Double = 0
+    @State private var picTime: Double = 0
+    @State private var nightTime: Double = 0
+    @State private var instrumentTime: Double = 0
+    @State private var landingsDay: Int = 0
+    @State private var landingsNight: Int = 0
+    @EnvironmentObject var viewModel: FlightLogsViewModel
+    
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
-        ScrollView {
-            VStack(spacing: 20) {
-                Text("Date")
-                    .bold()
-                DatePicker("Date", selection: $logEntry.date, displayedComponents: .date)
-                    .datePickerStyle(WheelDatePickerStyle())
-                    .labelsHidden()
-                    .padding()
-
-                Text("Aircraft Make and Model")
-                    .bold()
-                TextField("", text: $logEntry.aircraftMakeModel)
-                    .padding()
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-
-                Text("Aircraft Identification")
-                    .bold()
-                TextField("", text: $logEntry.aircraftIdentification)
-                    .padding()
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-
-                Text("Departure Point")
-                    .bold()
-                TextField("", text: $logEntry.departurePoint)
-                    .padding()
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-
-                Text("Arrival Point")
-                    .bold()
-                TextField("", text: $logEntry.arrivalPoint)
-                    .padding()
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-
-                // Assuming DoubleInputView is a custom component that handles Double inputs
-                Text("Total Hours")
-                    .bold()
-                DoubleInputView(value: Binding(get: { logEntry.totalHours }, set: { logEntry.totalHours = $0 }), label: "", placeholder: "e.g., 5.5")
-
-                Text("PIC Time")
-                    .bold()
-                DoubleInputView(value: Binding(get: { logEntry.picTime }, set: { logEntry.picTime = $0 }), label: "", placeholder: "e.g., 4.0")
-
-                // Optional Double values
-                if let _ = logEntry.nightTime {
-                    Text("Night Time")
-                        .bold()
-                    DoubleInputView(value: Binding(get: { logEntry.nightTime ?? 0 }, set: { logEntry.nightTime = $0 }), label: "", placeholder: "e.g., 2.0")
-                }
-
-                if let _ = logEntry.instrumentTime {
-                    Text("Instrument Time")
-                        .bold()
-                    DoubleInputView(value: Binding(get: { logEntry.instrumentTime ?? 0 }, set: { logEntry.instrumentTime = $0 }), label: "", placeholder: "e.g., 1.5")
-                }
-
-                // Assuming IntInputView is a custom component that handles Int inputs
-                if let _ = logEntry.landingsDay {
-                    Text("Day Landings")
-                        .bold()
-                    IntInputView(value: Binding(get: { logEntry.landingsDay ?? 0 }, set: { logEntry.landingsDay = $0 }), label: "", placeholder: "e.g., 3")
-                }
-
-                if let _ = logEntry.landingsNight {
-                    Text("Night Landings")
-                        .bold()
-                    IntInputView(value: Binding(get: { logEntry.landingsNight ?? 0 }, set: { logEntry.landingsNight = $0 }), label: "", placeholder: "e.g., 1")
-                }
-                Button("Submit") {
-                    FlightLogsViewModel.postFlightLog(logEntry: logEntry) {
-                        DispatchQueue.main.async {
-                            presentationMode.wrappedValue.dismiss()
-                        }
+        NavigationStack {
+            ScrollView {
+                VStack {
+                    Image("Placholder.logo")
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 100, height: 120)
+                        .padding(.vertical, 32)
+                    
+                    VStack(spacing: 24) {
+                        
+                        DatePicker(
+                            "Flight Date",
+                            selection: $selectedDate,
+                            displayedComponents: .date
+                        )
+                        .padding()
+                        
+                        InputView(text: $aircraftMakeModel,
+                                  title: "Aircraft Make & Model",
+                                  placeholder: "Enter the Make & Model")
+                        .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
+                        
+                        InputView(text: $aircraftIdentification,
+                                  title: "Aircraft ID",
+                                  placeholder: "Enter the ID")
+                        
+                        InputView(text: $departurePoint,
+                                  title: "Departure Point",
+                                  placeholder: "Enter the Departure Point")
+                        
+                        InputView(text: $arrivalPoint,
+                                  title: "Arrival Point",
+                                  placeholder: "Enter the Arrival Point")
+                        
+                        DoubleInputView(value: $totalHours,
+                                        label: "Total Hours",
+                                        placeholder: "Enter Total Hours")
+                        
+                        DoubleInputView(value: $picTime,
+                                        label: "Pilot In Command Time",
+                                        placeholder: "Enter PIC Time")
+                        
+                        DoubleInputView(value: $nightTime,
+                                        label: "Night Time Hours",
+                                        placeholder: "Enter Night Time Hours")
+                        
+                        DoubleInputView(value: $instrumentTime,
+                                        label: "Instrument Time",
+                                        placeholder: "Enter Instrument Time")
+                        
+                        IntInputView(value: $landingsDay,
+                                     label: "Day Landings",
+                                     placeholder: "Enter Day Landings")
+                        
+                        IntInputView(value: $landingsNight,
+                                     label: "Night Landings",
+                                     placeholder: "Enter Night Landings")
                     }
+                    .padding(.horizontal)
+                    .padding(.top, 12)
+                    
+                    Button {
+                        Task {
+                            do {
+                                if let currentUserUID = viewModel.userSession?.uid {
+                                    let newLogEntry = LogEntry(id: UUID().uuidString,
+                                                               userId: currentUserUID,
+                                                               date: selectedDate,
+                                                               aircraftMakeModel: aircraftMakeModel,
+                                                               aircraftIdentification: aircraftIdentification,
+                                                               departurePoint: departurePoint,
+                                                               arrivalPoint: arrivalPoint,
+                                                               totalHours: totalHours,
+                                                               picTime: picTime,
+                                                               nightTime: nightTime,
+                                                               instrumentTime: instrumentTime,
+                                                               landingsDay: landingsDay,
+                                                               landingsNight: landingsNight)
+                                    
+                                    try await FlightLogsViewModel.postFlightLog(logEntry: newLogEntry)
+                                    presentationMode.wrappedValue.dismiss()
+                                } else {
+                                    print("No current user UID found")
+                                }
+                            } catch {
+                                // Handle the error
+                                print("An error occurred: \(error.localizedDescription)")
+                            }
+                        }
+                    } label: {
+                        HStack {
+                            Text("Submit")
+                                .fontWeight(.semibold)
+                            Image(systemName: "arrow.right")
+                        }
+                        .foregroundColor(.white)
+                        .frame(width: UIScreen.main.bounds.width - 32, height: 48)
+                    }
+                    .background(Color(.systemBlue))
+                    //.disabled(!formIsVaild)
+                    //.opacity(formIsVaild ? 1.0 : 0.5)
+                    .cornerRadius(10)
+                    .padding(.top, 24)
+                    
                 }
-                .padding()
-                .background(Color.blue)
-                .cornerRadius(10)
-                .foregroundColor(.white)
             }
-            .padding()
-            .navigationBarItems(leading: Button("Dismiss") {
-                presentationMode.wrappedValue.dismiss()
-            })
         }
-        .navigationBarTitle("Add/Edit Log", displayMode: .inline)
     }
 }
 
-
-struct LogEntryView_Previews: PreviewProvider {
-    static var previews: some View {
-        // Create a sample LogEntry instance
-        let sampleLogEntry = LogEntry(
-            date: Date(),
-            aircraftMakeModel: "Cessna 172",
-            aircraftIdentification: "N123AB",
-            departurePoint: "KJFK",
-            arrivalPoint: "KLAX",
-            totalHours: 5.5,
-            picTime: 4.5,
-            nightTime: 2.0,
-            instrumentTime: 1.0,
-            landingsDay: 3,
-            landingsNight: 1
-        )
-        
-        // Use the .constant modifier to create a binding for the preview
-        LogEntryView(logEntry: .constant(sampleLogEntry))
-            .previewLayout(.sizeThatFits)
-    }
+#Preview {
+    LogEntryView()
 }
+
+
+
+

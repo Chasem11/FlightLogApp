@@ -20,18 +20,10 @@ struct LogEntryDetailView: View {
                 Text("Arrival Point: \(logEntry.arrivalPoint)").bold()
                 Text("Total Hours: \(logEntry.totalHours, specifier: "%.1f")").bold()
                 Text("PIC Time: \(logEntry.picTime, specifier: "%.1f")").bold()
-                if let nightTime = logEntry.nightTime {
-                    Text("Night Time: \(nightTime, specifier: "%.1f")").bold()
-                }
-                if let instrumentTime = logEntry.instrumentTime {
-                    Text("Instrument Time: \(instrumentTime, specifier: "%.1f")").bold()
-                }
-                if let landingsDay = logEntry.landingsDay {
-                    Text("Day Landings: \(landingsDay)").bold()
-                }
-                if let landingsNight = logEntry.landingsNight {
-                    Text("Night Landings: \(landingsNight)").bold()
-                }
+                Text("Night Time: \(logEntry.nightTime, specifier: "%.1f")").bold()
+                Text("Instrument Time: \(logEntry.instrumentTime, specifier: "%.1f")").bold()
+                Text("Day Landings: \(logEntry.landingsDay)").bold()
+                Text("Night Landings: \(logEntry.landingsNight)").bold()
             }
             .padding()
         }

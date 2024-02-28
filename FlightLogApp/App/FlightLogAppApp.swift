@@ -19,6 +19,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct FlightLogAppApp: App {
     @StateObject var viewModel = AuthViewModel()
+    @StateObject var flightLogsViewModel = FlightLogsViewModel()
     
     init() {
         FirebaseApp.configure()
@@ -28,6 +29,7 @@ struct FlightLogAppApp: App {
         WindowGroup {
             ContentView()
                 .environmentObject(viewModel)
+                .environmentObject(flightLogsViewModel)
         }
     }
 }
